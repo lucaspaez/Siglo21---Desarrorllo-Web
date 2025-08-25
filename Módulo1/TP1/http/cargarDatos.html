@@ -25,7 +25,7 @@
     <!--Barra de Navegación-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Sistema Planta Linda</a>
+            <a class="navbar-brand" href="#">Sistema Planta Linda <i class="bi bi-flower3"></i></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
                 aria-label="Toggle navigation">
@@ -34,17 +34,17 @@
             <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
                 aria-labelledby="offcanvasDarkNavbarLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Administrar</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./login.html">Iniciar Sesión</a>
+                            <a class="nav-link" aria-current="page" href="./login.html">Iniciar Sesión</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./cargarDatos.html">Cargar Datos</a>
+                            <a class="nav-link active" href="./cargarDatos.html">Cargar Datos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./stock.html">Ver Stock</a>
@@ -58,76 +58,72 @@
     </nav>
 
     <!--Formulario de Carga de Datos-->
-    <section class="vh-100 gradient-custom" style="margin-top: 56px;">
+    <section class="h-100 gradient-custom" style="margin-top: 56px;">
         <div class="container py-5">
             <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                    <div class="card bg-dark text-white" style="border-radius: 1rem;">
-                        <div class="card-body p-5 text-center">
+                <div class="col-lg-8">
 
-                            <div class="mb-md-5 mt-md-4">
+                    <div class="bg-dark bg-gradient p-5 text-white" style="border-radius: 1rem;">
 
-                                <h2 class="fw-bold mb-2">Ingresar Datos</h2>
-                                <p class="text-white-50 mb-5">Introduzca los datos de las plantas sin omitir nungun
-                                    campo por favor.</p>
+                        <h2 class="mb-2">Ingresar Datos</h2>
+                        <p class="text-white-50 mb-3">Introduzca los datos de las plantas sin omitir nungún
+                            campo por favor.</p>
 
-                                <div data-mdb-input-init class="form-outline form-white mb-4 text-start">
-                                    <label for="selecEspecie">Seleccione la Especie</label>
-                                    <select id="selecEspecie" class="form-select" aria-label="Default select example">
-                                        <option value="1">Sativa</option>
-                                        <option value="2">Indica</option>
-                                    </select>
-                                </div>
-
-                                <div data-mdb-input-init class="form-outline form-white mb-4 text-start">
-                                    <label for="selecGenetica">Seleccione Genética</label>
-                                    <select id="selectGenetica" class="form-select" aria-label="Default select example">
-                                        <option value="1">Cannatonic</option>
-                                        <option value="2">CBD Therapy</option>
-                                        <option value="3">Candida (CD-1)</option>
-                                        <option value="4">Juanita La Lagrimosa</option>
-                                        <option value="5">OG Kush CBD</option>
-                                        <option value="6">CBD ComPassion</option>
-                                        <option value="7">Royal Medic</option>
-                                        <option value="8">CBD Critical Mass</option>
-                                        <option value="9">S.A.G.E. CBD</option>
-                                        <option value="10">CBD-Chronic</option>
-                                    </select>
-                                </div>
-
-                                <div data-mdb-input-init class="form-outline form-white mb-4 text-start">
-                                    <label for="selecCicloVida">Seleccione etapa del ciclo de vida</label>
-                                    <select id="selecCicloVida" class="form-select" aria-label="Default select example">
-                                        <option value="1">Germinación</option>
-                                        <option value="2">Plántula</option>
-                                        <option value="3">Vegetación</option>
-                                        <option value="4">Floración</option>
-                                    </select>
-                                </div>
-
-                                <div data-mdb-input-init class="form-outline form-white mb-4 text-start">
-                                    <label for="selectTipoCultivo">Seleccione el tipo de cultivo</label>
-                                    <select id="selectTipoCultivo" class="form-select"
-                                        aria-label="Default select example">
-                                        <option value="1">Sustrato</option>
-                                        <option value="2">Hidropónico</option>
-                                    </select>
-                                </div>
-
-                                <div data-mdb-input-init class="form-outline form-white mb-4 text-start">
-                                    <label for="datoObservaciones" class="form-label">Observaciones</label>
-                                    <textarea class="form-control" id="datoObservaciones" rows="3"></textarea>
-                                </div>
-
-                                <div class="input-group mb-3">
-                                    <input type="file" class="form-control" id="selectImg">
-                                </div>
-
-                                <button data-mdb-button-init data-mdb-ripple-init
-                                    class="btn btn-outline-light btn-lg px-5" type="submit">Ingresar</button>
-
-                            </div>
+                        <div data-mdb-input-init class="form-outline form-white mb-4 text-start">
+                            <label for="selecEspecie">Seleccione la Especie</label>
+                            <select id="selecEspecie" class="form-select" aria-label="Default select example">
+                                <option value="1">Sativa</option>
+                                <option value="2">Indica</option>
+                            </select>
                         </div>
+
+                        <div data-mdb-input-init class="form-outline form-white mb-4 text-start">
+                            <label for="selecGenetica">Seleccione Genética</label>
+                            <select id="selectGenetica" class="form-select" aria-label="Default select example">
+                                <option value="1">Cannatonic</option>
+                                <option value="2">CBD Therapy</option>
+                                <option value="3">Candida (CD-1)</option>
+                                <option value="4">Juanita La Lagrimosa</option>
+                                <option value="5">OG Kush CBD</option>
+                                <option value="6">CBD ComPassion</option>
+                                <option value="7">Royal Medic</option>
+                                <option value="8">CBD Critical Mass</option>
+                                <option value="9">S.A.G.E. CBD</option>
+                                <option value="10">CBD-Chronic</option>
+                            </select>
+                        </div>
+
+                        <div data-mdb-input-init class="form-outline form-white mb-4 text-start">
+                            <label for="selecCicloVida">Seleccione etapa del ciclo de vida</label>
+                            <select id="selecCicloVida" class="form-select" aria-label="Default select example">
+                                <option value="1">Germinación</option>
+                                <option value="2">Plántula</option>
+                                <option value="3">Vegetación</option>
+                                <option value="4">Floración</option>
+                            </select>
+                        </div>
+
+                        <div data-mdb-input-init class="form-outline form-white mb-4 text-start">
+                            <label for="selectTipoCultivo">Seleccione el tipo de cultivo</label>
+                            <select id="selectTipoCultivo" class="form-select" aria-label="Default select example">
+                                <option value="1">Sustrato</option>
+                                <option value="2">Hidropónico</option>
+                            </select>
+                        </div>
+
+                        <div data-mdb-input-init class="form-outline form-white mb-4 text-start">
+                            <label for="datoObservaciones" class="form-label">Observaciones</label>
+                            <textarea class="form-control" id="datoObservaciones" rows="3"></textarea>
+                        </div>
+
+                        <div class="form-outline form-white mb-4 text-start">
+                            <label for="selectImg" class="form-label">Seleccione una imágen</label>
+                            <input type="file" class="form-control" id="selectImg">
+                        </div>
+
+                        <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5"
+                            type="submit">Cargar</button>
+
                     </div>
                 </div>
             </div>
