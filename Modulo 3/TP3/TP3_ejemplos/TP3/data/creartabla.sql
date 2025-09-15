@@ -1,0 +1,9 @@
+CREATE DATABASE proyecto;
+
+USE proyecto;
+
+CREATE TABLE usuarios (
+  id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  usuario VARCHAR(20) NOT NULL,
+  clave VARCHAR(20) NOT NULL
+);
