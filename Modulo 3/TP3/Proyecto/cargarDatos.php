@@ -33,10 +33,9 @@ if (isset($_POST['submit'])) {
             "etapa"    => $_POST['etapa'],
             "cultivo"    => $_POST['cultivo'],
             "observaciones"    => $_POST['observaciones'],
-            "ruta_imagen"    => $_POST['observaciones'],
         );
         var_dump($plantas);
-        $consultaSQL = "INSERT INTO plantas (especie, genetica, etapa, cultivo, observaciones, ruta_imagen)
+        $consultaSQL = "INSERT INTO plantas (especie, genetica, etapa, cultivo, observaciones)
             values (:" . implode(", :", array_keys($plantas)) . ")";
 
         $sentencia = $conexion->prepare($consultaSQL);
@@ -71,7 +70,7 @@ if (isset($_POST['submit'])) {
     </style>
 </head>
 
-<body>
+<body class="gradient-custom">
     <!--Barra de Navegación-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
@@ -111,10 +110,10 @@ if (isset($_POST['submit'])) {
     </nav>
 
     <!--Formulario de Carga de Datos-->
-    <section class="hv-100 gradient-custom" style="margin-top: 56px;">
+    <section class="vh-100" style="margin-top: 56px;">
         <div class="container py-5">
             <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-lg-8">
+                <div class="col-lg-8 mb-5">
 
                     <?php
                     if (isset($resultado)) {
@@ -140,7 +139,8 @@ if (isset($_POST['submit'])) {
                         <form method="post">
                             <div class="form-group form-white mb-4 text-start">
                                 <label for="selecEspecie">Seleccione la Especie</label>
-                                <select name="especie" id="selecEspecie" class="form-select" aria-label="Default select example">
+                                <select name="especie" id="selecEspecie" class="form-select"
+                                    aria-label="Default select example">
                                     <option value="Sativa">Sativa</option>
                                     <option value="Indica">Indica</option>
                                 </select>
@@ -148,7 +148,8 @@ if (isset($_POST['submit'])) {
 
                             <div data-mdb-input-init class="form-outline form-white mb-4 text-start">
                                 <label for="selecGenetica">Seleccione Genética</label>
-                                <select name="genetica" id="selecGenetica" class="form-select" aria-label="Default select example">
+                                <select name="genetica" id="selecGenetica" class="form-select"
+                                    aria-label="Default select example">
                                     <option value="Cannatonic">Cannatonic</option>
                                     <option value="CBD Therapy">CBD Therapy</option>
                                     <option value="Candida (CD-1)">Candida (CD-1)</option>
@@ -164,7 +165,8 @@ if (isset($_POST['submit'])) {
 
                             <div data-mdb-input-init class="form-outline form-white mb-4 text-start">
                                 <label for="selecCicloVida">Seleccione etapa del ciclo de vida</label>
-                                <select name="etapa" id="selecCicloVida" class="form-select" aria-label="Default select example">
+                                <select name="etapa" id="selecCicloVida" class="form-select"
+                                    aria-label="Default select example">
                                     <option value="Germinación">Germinación</option>
                                     <option value="Plántula">Plántula</option>
                                     <option value="Vegetación">Vegetación</option>
@@ -174,7 +176,8 @@ if (isset($_POST['submit'])) {
 
                             <div data-mdb-input-init class="form-outline form-white mb-4 text-start">
                                 <label for="selectTipoCultivo">Seleccione el tipo de cultivo</label>
-                                <select name="cultivo" id="selectTipoCultivo" class="form-select" aria-label="Default select example">
+                                <select name="cultivo" id="selectTipoCultivo" class="form-select"
+                                    aria-label="Default select example">
                                     <option value="Sustrato">Sustrato</option>
                                     <option value="Hidropónico">Hidropónico</option>
                                 </select>
@@ -182,16 +185,18 @@ if (isset($_POST['submit'])) {
 
                             <div data-mdb-input-init class="form-outline form-white mb-4 text-start">
                                 <label for="datoObservaciones" class="form-label">Observaciones</label>
-                                <textarea name="observaciones" class="form-control" id="datoObservaciones" rows="3"></textarea>
+                                <textarea name="observaciones" class="form-control" id="datoObservaciones"
+                                    rows="3"></textarea>
                             </div>
 
-                            <div class="form-outline form-white mb-4 text-start">
+                            <!-- <div class="form-outline form-white mb-4 text-start">
                                 <label for="selectImg" class="form-label">Seleccione una imágen</label>
                                 <input name="imagen" type="file" class="form-control" id="selectImg">
-                            </div>
+                            </div> -->
                             <div class="form-group">
-                                <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5"
-                                    type="submit" name="submit">Cargar</button>
+                                <button data-mdb-button-init data-mdb-ripple-init
+                                    class="btn btn-outline-light btn-lg px-5" type="submit"
+                                    name="submit">Cargar</button>
                             </div>
                         </form>
                     </div>
@@ -202,8 +207,8 @@ if (isset($_POST['submit'])) {
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

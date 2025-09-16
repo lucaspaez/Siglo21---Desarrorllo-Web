@@ -8,6 +8,5 @@ CREATE TABLE plantas (
   genetica VARCHAR(40) NOT NULL,
   etapa VARCHAR(40) NOT NULL,
   cultivo VARCHAR(40) NOT NULL,
-  observaciones VARCHAR(255) NOT NULL,
-  ruta_imagen VARCHAR(255)
+  observaciones VARCHAR(255) NOT NULL
 );
